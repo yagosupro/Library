@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - library@localhost" uuid="7598eee3-5ea0-4500-bbcf-954850cc54f8">
+    <database-info product="MySQL" version="5.7.16-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="library"/>
+      <table id="2" parent="1" name="library"/>
+      <table id="3" parent="1" name="users"/>
+      <table id="4" parent="1" name="books"/>
+      <table id="5" parent="1" name="clietns"/>
+      <table id="6" parent="1" name="journal"/>
+      <column id="7" parent="2" name="idBook">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="8" parent="2" name="nameAutor">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="9" parent="2" name="nameBook">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="10" parent="2" name="whoHas">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="11" parent="2" name="IssuingTime">
+        <data-type>date</data-type>
+      </column>
+      <column id="12" parent="2" name="returnTime">
+        <data-type>date</data-type>
+      </column>
+      <column id="13" parent="2" name="quanityBook">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="14" parent="2" name="library_idBook_uindex">
+        <columns>idBook</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="15" parent="2" name="library_idBook_uindex">
+        <columns>idBook</columns>
+        <underlying-index>library_idBook_uindex</underlying-index>
+      </key>
+      <key id="16" parent="2" name="PRIMARY">
+        <columns>idBook</columns>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="3" name="id_users">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="18" parent="3" name="nameUsers">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <index id="19" parent="3" name="users_id_users_uindex">
+        <columns>id_users</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="20" parent="3" name="users_nameUsers_uindex">
+        <columns>nameUsers</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="21" parent="3" name="PRIMARY">
+        <columns>id_users</columns>
+        <primary>1</primary>
+      </key>
+      <key id="22" parent="3" name="users_id_users_uindex">
+        <columns>id_users</columns>
+        <underlying-index>users_id_users_uindex</underlying-index>
+      </key>
+      <key id="23" parent="3" name="users_nameUsers_uindex">
+        <columns>nameUsers</columns>
+        <underlying-index>users_nameUsers_uindex</underlying-index>
+      </key>
+      <column id="24" parent="4" name="id_book">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="25" parent="4" name="name_autor">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="26" parent="4" name="name_book">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="27" parent="4" name="quantity_book">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="28" parent="4" name="books_id_book_uindex">
+        <columns>id_book</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="29" parent="4" name="books_id_book_uindex">
+        <columns>id_book</columns>
+        <underlying-index>books_id_book_uindex</underlying-index>
+      </key>
+      <key id="30" parent="4" name="PRIMARY">
+        <columns>id_book</columns>
+        <primary>1</primary>
+      </key>
+      <column id="31" parent="5" name="id_client">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="32" parent="5" name="name_client">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="33" parent="5" name="client_address">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <index id="34" parent="5" name="clietns_id_client_uindex">
+        <columns>id_client</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="35" parent="5" name="clietns_id_client_uindex">
+        <columns>id_client</columns>
+        <underlying-index>clietns_id_client_uindex</underlying-index>
+      </key>
+      <key id="36" parent="5" name="PRIMARY">
+        <columns>id_client</columns>
+        <primary>1</primary>
+      </key>
+      <column id="37" parent="6" name="id_journal">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="38" parent="6" name="id_book">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="39" parent="6" name="id_client">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="40" parent="6" name="issue_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="41" parent="6" name="return_time">
+        <data-type>datetime</data-type>
+      </column>
+      <index id="42" parent="6" name="journal_id_journal_uindex">
+        <columns>id_journal</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="43" parent="6" name="journal_id_journal_uindex">
+        <columns>id_journal</columns>
+        <underlying-index>journal_id_journal_uindex</underlying-index>
+      </key>
+      <key id="44" parent="6" name="PRIMARY">
+        <columns>id_journal</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
